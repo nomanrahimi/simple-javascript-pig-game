@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pig Game</title>
+</head>
+
+<style>
+    body {
+        background: #a8c0ff;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #3f2b96, #a8c0ff);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        font-family: sans-serif;
+
+
+
+    }
+
+    .gameBox {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 70%;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+        z-index: 10;
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+        height: 70%;
+    }
+
+    .userBox {
+        width: 45%;
+        background: rgba(150, 29, 29, 0.3);
+        padding: 2rem;
+    }
+
+    .paylertitle {
+        text-align: center;
+        font-size: 35px;
+        font-weight: 300;
+        font-family: sans-serif;
+    }
+
+    .scoreNumber {
+        text-align: center;
+        font-weight: 200;
+        font-size: 40px;
+        color: rgba(187, 40, 40, 0.577);
+    }
+
+    .scoreBox {
+        width: 130px;
+        height: 130px;
+        margin: 0 auto;
+        background: #fff;
+        border-radius: 15px;
+        margin-top: 170px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+
+    }
+
+    .newGame {
+        position: absolute;
+        padding: 1rem;
+        border-radius: 10px;
+        border: 0;
+        left: 47%;
+        bottom: 70%;
+        z-index: 100;
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+
+
+    .rollDice {
+        position: absolute;
+        padding: 1rem;
+        border-radius: 10px;
+        border: 0;
+        left: 47%;
+        bottom: 30%;
+        z-index: 100;
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    .holeDice {
+        position: absolute;
+        padding: 1rem;
+        border-radius: 10px;
+        border: 0;
+        left: 48%;
+        bottom: 20%;
+        z-index: 100;
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    button:hover {
+        border: 1px solid green;
+    }
+
+    .tosDiv {
+        position: absolute;
+        border-radius: 10px;
+        border: 0;
+        left: 47%;
+        bottom: 50%;
+        z-index: 100;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .player--active {
+        background: rgba(101, 98, 98, 0.156) !important;
+    }
+
+    .winner-player {
+        background: rgba(0, 0, 0, 0.7) !important;
+    }
+
+    .winner-player h4 {
+        color: white;
+    }
+
+    .winner-player .scoreNumber {
+        color: white;
+    }
+</style>
+
+<body>
+
+
+    <div class="gameBox">
+        <div class="userBox player-0 ">
+            <h4 class="paylertitle">Player 1</h4>
+            <p class="scoreNumber " id="score-0">0</p>
+            <div class="scoreBox">
+                <p>Current</p>
+                <p class="currentScore--0">0</p>
+            </div>
+        </div>
+        <div class="userBox player-1">
+            <h4 class="paylertitle">Player 2</h4>
+            <p class="scoreNumber" id="score-1">0</p>
+            <div class="scoreBox">
+                <p>Current</p>
+                <p class="currentScore--1">0</p>
+            </div>
+        </div>
+
+
+    </div>
+
+    <button class="newGame">New Game</button>
+    <div class="tosDiv">
+        <img class="tosImage" src="./images/dice/dice-1.jpeg" alt="">
+    </div>
+
+    <button class="rollDice">ROLL DICE</button>
+    <button class="holeDice">HOLD</button>
+
+
+
+
+
+
+    <script src="./pig_game.js"></script>
+</body>
+
+</html>
